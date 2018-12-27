@@ -1,0 +1,64 @@
+﻿@model IEnumerable<PDFRepositoryProject.Models.DbPDFDocument>
+
+@{
+    ViewData["Title"] = "Repository";
+}
+
+<h2>PDF Repository</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FileName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UploadDateTime)
+            </th>
+            <th>
+                Show
+            </th>
+            <th>
+                Download
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FileName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UploadDateTime)
+            </td>
+            <td align="center">
+                @Html.ActionLink($"{((char)0x2714).ToString()}", "ShowPDF", new { id = item.Id })
+            </td>
+            <td align="center">
+                @Html.ActionLink($"{((char)0x2714).ToString()}", "DownloadPDF", new { id = item.Id })
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

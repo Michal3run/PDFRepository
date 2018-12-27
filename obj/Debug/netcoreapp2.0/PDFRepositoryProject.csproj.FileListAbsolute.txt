@@ -1,0 +1,11 @@
+C:\Users\micha\Desktop\Studia\Semestr 3\Zaawansowane Technologie Przetwarzania Danych\Projekt PDF\PDFRepositoryProject\PDFRepositoryProject\bin\Debug\netcoreapp2.0\PDFRepositoryProject.deps.json
+C:\Users\micha\Desktop\Studia\Semestr 3\Zaawansowane Technologie Przetwarzania Danych\Projekt PDF\PDFRepositoryProject\PDFRepositoryProject\bin\Debug\netcoreapp2.0\PDFRepositoryProject.runtimeconfig.json
+C:\Users\micha\Desktop\Studia\Semestr 3\Zaawansowane Technologie Przetwarzania Danych\Projekt PDF\PDFRepositoryProject\PDFRepositoryProject\bin\Debug\netcoreapp2.0\PDFRepositoryProject.runtimeconfig.dev.json
+C:\Users\micha\Desktop\Studia\Semestr 3\Zaawansowane Technologie Przetwarzania Danych\Projekt PDF\PDFRepositoryProject\PDFRepositoryProject\bin\Debug\netcoreapp2.0\PDFRepositoryProject.dll
+C:\Users\micha\Desktop\Studia\Semestr 3\Zaawansowane Technologie Przetwarzania Danych\Projekt PDF\PDFRepositoryProject\PDFRepositoryProject\bin\Debug\netcoreapp2.0\PDFRepositoryProject.pdb
+C:\Users\micha\Desktop\Studia\Semestr 3\Zaawansowane Technologie Przetwarzania Danych\Projekt PDF\PDFRepositoryProject\PDFRepositoryProject\obj\Debug\netcoreapp2.0\PDFRepositoryProject.csproj.CoreCompileInputs.cache
+C:\Users\micha\Desktop\Studia\Semestr 3\Zaawansowane Technologie Przetwarzania Danych\Projekt PDF\PDFRepositoryProject\PDFRepositoryProject\obj\Debug\netcoreapp2.0\PDFRepositoryProject.AssemblyInfoInputs.cache
+C:\Users\micha\Desktop\Studia\Semestr 3\Zaawansowane Technologie Przetwarzania Danych\Projekt PDF\PDFRepositoryProject\PDFRepositoryProject\obj\Debug\netcoreapp2.0\PDFRepositoryProject.AssemblyInfo.cs
+C:\Users\micha\Desktop\Studia\Semestr 3\Zaawansowane Technologie Przetwarzania Danych\Projekt PDF\PDFRepositoryProject\PDFRepositoryProject\obj\Debug\netcoreapp2.0\PDFRepositoryProject.dll
+C:\Users\micha\Desktop\Studia\Semestr 3\Zaawansowane Technologie Przetwarzania Danych\Projekt PDF\PDFRepositoryProject\PDFRepositoryProject\obj\Debug\netcoreapp2.0\PDFRepositoryProject.pdb
+C:\Users\micha\Desktop\Studia\Semestr 3\Zaawansowane Technologie Przetwarzania Danych\Projekt PDF\PDFRepositoryProject\PDFRepositoryProject\obj\Debug\netcoreapp2.0\PDFRepositoryProject.csprojAssemblyReference.cache
