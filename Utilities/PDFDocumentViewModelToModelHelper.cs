@@ -41,7 +41,7 @@ namespace PDFRepositoryProject.Managers
                 return sourceDocument.Data;
             }
 
-            var fileData = sourceDocument.Data ?? new PDFFileData();
+            var fileData = sourceDocument?.Data ?? new PDFFileData();
             fileData.Content = data;
             fileData.ExtractedText = PDFParser.ExtractTextFromPdf(data);
             return fileData;
