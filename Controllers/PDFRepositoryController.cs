@@ -207,7 +207,7 @@ namespace PDFRepositoryProject.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var document = _context.Documents.Where(m => m.Id == id).Include(m => m.Data).SingleOrDefault();
+            var document = await _context.Documents.SingleOrDefaultAsync(m => m.Id == id);
             _context.Documents.Remove(document);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
