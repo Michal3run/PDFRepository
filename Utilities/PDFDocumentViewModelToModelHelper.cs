@@ -1,4 +1,5 @@
 ﻿using PDFRepositoryProject.Models;
+using PDFRepositoryProject.PDFProcessing;
 using System;
 
 namespace PDFRepositoryProject.Managers
@@ -42,6 +43,7 @@ namespace PDFRepositoryProject.Managers
 
             var fileData = sourceDocument.Data ?? new PDFFileData();
             fileData.Content = data;
+            fileData.ExtractedText = PDFParser.ExtractTextFromPdf(data);
             return fileData;
         }
     }
