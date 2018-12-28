@@ -7,7 +7,9 @@ namespace PDFRepositoryProject.Models
         [ForeignKey("DbPDFDocument")]
         public int Id { get; set; }
 
-        public byte[] Content { get; set; }        
+        public byte[] Content { get; set; }  
+        
+        public string ExtractedText { get; set; }
 
         public virtual DbPDFDocument DbPDFDocument { get; set; }
     }
