@@ -24,27 +24,28 @@ namespace PDFRepositoryProject.Controllers
         }
 
         // GET: PDFRepository
-        public async Task<IActionResult> Index()
+        public IActionResult Index(string nameFilter, string contentFilter)
         {
-            return View(await _context.Documents.ToListAsync());
-        }
+            nameFilter = nameFilter?.ToLower();
 
-        // GET: PDFRepository/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
+            ViewData["nameFilter"] = nameFilter;
+            ViewData["contentFilter"] = contentFilter;
+
+            var documents = string.IsNullOrEmpty(contentFilter) 
+                ? _context.Documents.AsEnumerable() //not to include data, that won't be used
+                : _context.Documents.Include(d => d.Data);
+
+            if (!string.IsNullOrEmpty(nameFilter))
             {
-                return NotFound();
+                documents = documents.Where(s => s.FileName.ToLower().Contains(nameFilter));
             }
 
-            var document = await _context.Documents
-                .SingleOrDefaultAsync(m => m.Id == id);
-            if (document == null)
+            if (!string.IsNullOrEmpty(contentFilter))
             {
-                return NotFound();
+                documents = documents.Where(s => !string.IsNullOrEmpty(s.Data.ExtractedText) && s.Data.ExtractedText.Contains(contentFilter));
             }
 
-            return View(document);
+            return View(documents.ToList());
         }
 
         // GET: PDFRepository/Create
