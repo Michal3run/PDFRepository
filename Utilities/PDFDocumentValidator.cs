@@ -58,10 +58,10 @@ namespace PDFRepositoryProject.Utilities
                 modelState.AddModelError(formFile.Name,
                     $"The {fieldDisplayName}file ({fileName}) is empty.");
             }
-            else if (formFile.Length > 1048576)
+            else if (formFile.Length > 104857600)
             {
                 modelState.AddModelError(formFile.Name,
-                    $"The {fieldDisplayName}file ({fileName}) exceeds 1 MB.");
+                    $"The {fieldDisplayName}file ({fileName}) exceeds 100 MB.");
             }
         }
     }

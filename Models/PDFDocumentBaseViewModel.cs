@@ -12,8 +12,7 @@ namespace PDFRepositoryProject.Models
         [StringLength(255, MinimumLength = 1)]
         public string FileName { get; set; }
 
-        [Required]
-        [StringLength(255, MinimumLength = 1)]
+        [StringLength(255, MinimumLength = 0)]
         public string Description { get; set; }
 
         [Required]

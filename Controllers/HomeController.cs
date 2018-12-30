@@ -12,7 +12,7 @@ namespace PDFRepositoryProject.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index", "PDFRepository");            
         }
 
         public IActionResult About()
