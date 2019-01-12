@@ -1,13 +1,6 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 using System.IO;
-using System.Net;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-using PDFRepositoryProject.Models;
 
 namespace PDFRepositoryProject.Utilities
 {

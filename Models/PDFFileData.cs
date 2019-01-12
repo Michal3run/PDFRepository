@@ -9,6 +9,9 @@ namespace PDFRepositoryProject.Models
 
         public byte[] Content { get; set; }  
         
+        /// <summary>
+        /// Extracted text from file
+        /// </summary>
         public string ExtractedText { get; set; }
 
         public virtual DbPDFDocument DbPDFDocument { get; set; }

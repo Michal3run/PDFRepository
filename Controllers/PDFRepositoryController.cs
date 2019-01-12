@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using PDFRepositoryProject.Data;
 using PDFRepositoryProject.Models;
-using System.Web;
 using PDFRepositoryProject.Utilities;
 using PDFRepositoryProject.Managers;
-using System.Text;
 
 namespace PDFRepositoryProject.Controllers
 {
@@ -31,7 +26,7 @@ namespace PDFRepositoryProject.Controllers
             ViewData["nameFilter"] = nameFilter;
             ViewData["contentFilter"] = contentFilter;
 
-            var documents = string.IsNullOrEmpty(contentFilter) 
+            var documents = string.IsNullOrEmpty(contentFilter)
                 ? _context.Documents.AsEnumerable() //not to include data, that won't be used
                 : _context.Documents.Include(d => d.Data);
 
@@ -42,6 +37,7 @@ namespace PDFRepositoryProject.Controllers
 
             if (!string.IsNullOrEmpty(contentFilter))
             {
+                //TODO: use Full Text Search
                 documents = documents.Where(s => !string.IsNullOrEmpty(s.Data.ExtractedText) && s.Data.ExtractedText.Contains(contentFilter));
             }
 
@@ -137,7 +133,7 @@ namespace PDFRepositoryProject.Controllers
             {
                 return View(viewModel);
             }
-            
+
             byte[] newAttachment = null;
 
             if (viewModel.File != null) //new file attached

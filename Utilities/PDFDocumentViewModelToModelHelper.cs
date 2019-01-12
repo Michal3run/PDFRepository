@@ -29,7 +29,7 @@ namespace PDFRepositoryProject.Managers
             result.Description = viewModel.Description;
             result.Category = viewModel.Category;
             result.UploadDateTime = data == null ? sourceDocument.UploadDateTime : DateTime.Now; //update UploadDateTime if new attachment
-            result.Data = GetData(sourceDocument, data);          
+            result.Data = GetData(sourceDocument, data);
 
             return result;
         }
